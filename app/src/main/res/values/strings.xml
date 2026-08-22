@@ -1,3 +1,41 @@
 <resources>
     <string name="app_name">ReadLog</string>
+
+    <!-- Toolbar Titles -->
+    <string name="title_add_entry">Add Book Entry</string>
+    <string name="title_detail">Book Details</string>
+    <string name="title_edit_entry">Edit Book Entry</string>
+
+    <!-- Empty State -->
+    <string name="empty_state_icon">📖</string>
+    <string name="empty_state_title">No books logged yet</string>
+    <string name="empty_state_subtitle">Tap the + button below to add your first book entry.</string>
+
+    <!-- Form Labels & Hints -->
+    <string name="hint_book_title">Book Title *</string>
+    <string name="hint_author">Author *</string>
+    <string name="label_reading_status">Reading Status</string>
+    <string name="status_want_to_read">Want to read</string>
+    <string name="status_reading">Reading</string>
+    <string name="status_finished">Finished</string>
+    <string name="hint_current_page">Current Page</string>
+    <string name="default_page_zero">0</string>
+    <string name="label_rating">Rating</string>
+    <string name="hint_open_library_url">Open Library Link (Optional)</string>
+    <string name="hint_favorite_quote">Favorite Quote</string>
+    <string name="hint_personal_notes">Personal Notes</string>
+
+    <!-- Detail Screen Labels -->
+    <string name="label_favorite_quote">Favorite Quote</string>
+    <string name="label_personal_notes">Personal Notes</string>
+    <string name="default_no_quote">No quote added.</string>
+    <string name="default_no_notes">No notes added.</string>
+
+    <!-- Buttons & Actions -->
+    <string name="btn_save_entry">Save Book Entry</string>
+    <string name="btn_update_entry">Update Book Entry</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_edit">Edit</string>
+    <string name="btn_view_open_library">View on Open Library ↗</string>
+    <string name="content_desc_add_book">Add new book</string>
 </resources>

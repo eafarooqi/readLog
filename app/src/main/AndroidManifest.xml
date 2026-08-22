@@ -11,16 +11,35 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ReadLog">
+
+        <!-- Main Dashboard Screen (Launcher Activity) -->
         <activity
             android:name=".ui.MainActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Add Book Screen -->
+        <activity
+            android:name=".ui.AddEntryActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Book Details Screen -->
+        <activity
+            android:name=".ui.DetailActivity"
+            android:exported="false" />
+
+        <!-- Edit Book Screen -->
+        <activity
+            android:name=".ui.EditEntryActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
     </application>
 
 </manifest>
