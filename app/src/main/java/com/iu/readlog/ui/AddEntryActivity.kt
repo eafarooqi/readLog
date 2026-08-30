@@ -145,27 +145,38 @@ class AddEntryActivity : AppCompatActivity() {
         tilOpenLibraryUrl.error = null
 
         // Execute validations.
+        // Title Validation.
         val titleValidation = ValidationUtils.validateTitle(title)
         if (!titleValidation.isValid) {
             tilTitle.error = titleValidation.errorMessage
             return
         }
 
+        // Author name validation.
         val authorValidation = ValidationUtils.validateAuthor(author)
         if (!authorValidation.isValid) {
             tilAuthor.error = authorValidation.errorMessage
             return
         }
 
+        // Current page validation
         val pageValidation = ValidationUtils.validateCurrentPage(page)
         if (!pageValidation.isValid) {
             tilCurrentPage.error = pageValidation.errorMessage
             return
         }
 
+        // External URL validation
         val urlValidation = ValidationUtils.validateOpenLibraryUrl(openLibraryUrl)
         if (!urlValidation.isValid) {
             tilOpenLibraryUrl.error = urlValidation.errorMessage
+            return
+        }
+
+        // Rating Validation.
+        val ratingValidation = ValidationUtils.validateRating(rating)
+        if (!ratingValidation.isValid) {
+            Toast.makeText(this, ratingValidation.errorMessage, Toast.LENGTH_SHORT).show()
             return
         }
 
@@ -177,7 +188,7 @@ class AddEntryActivity : AppCompatActivity() {
             currentPage = page,
             favoriteQuote = quote,
             notes = notes,
-            rating = if (rating < 1) 1 else rating,
+            rating = rating,
             openLibraryUrl = openLibraryUrl,
             entryDate = System.currentTimeMillis()
         )

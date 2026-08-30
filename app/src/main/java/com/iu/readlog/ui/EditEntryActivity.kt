@@ -210,6 +210,13 @@ class EditEntryActivity : AppCompatActivity() {
             return
         }
 
+        // Rating validation
+        val ratingValidation = ValidationUtils.validateRating(rating)
+        if (!ratingValidation.isValid) {
+            Toast.makeText(this, ratingValidation.errorMessage, Toast.LENGTH_SHORT).show()
+            return
+        }
+
         // Create updated copy retaining original ID and creation timestamp
         existingEntry?.let { entry ->
             val updated = entry.copy(
@@ -219,7 +226,7 @@ class EditEntryActivity : AppCompatActivity() {
                 currentPage = page,
                 favoriteQuote = quote,
                 notes = notes,
-                rating = if (rating < 1) 1 else rating,
+                rating = rating,
                 openLibraryUrl = openLibraryUrl,
                 updatedAt = System.currentTimeMillis()
             )

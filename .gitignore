@@ -15,3 +15,5 @@
 local.properties
 .idea/
 hs_err_pid50896.log
+.artifacts/
+.kotlin/
