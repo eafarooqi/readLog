@@ -49,3 +49,16 @@ Before running the project, make sure you have:
 
 ```bash
 git clone https://github.com/eafarooqi/readLog.git
+```
+
+2. Open the cloned project folder in Android Studio.
+
+3. Wait for Android Studio to finish the Gradle sync.
+
+4. Choose a device:
+   - Start an Android emulator from **Device Manager**, or
+   - Connect a real Android phone with **USB debugging** enabled.
+
+5. Select the device in Android Studio and click **Run**.
+
+6. After the app starts, use the plus button to add a new book entry.
